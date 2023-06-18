@@ -21,7 +21,7 @@ namespace MVCArchitecture.Controllers
                 {
                     case 1:
                         Console.Clear();
-                        RegionView.Menu();
+                        RegionController.Menu();
                         break;
                     case 2:
                         Console.Clear();

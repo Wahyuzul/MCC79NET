@@ -16,7 +16,7 @@ namespace MVCArchitecture.Controllers
                              join d in DepartmentController.GetAll() on e.DptID equals d.Id
                              join l in LocationController.GetAll() on d.LocationID equals l.Id
                              join c in CountryController.GetAll() on l.CtrID equals c.Id
-                             join r in RegionController.GetAll() on c.RegionId equals r.Id
+                             join r in Region.GetAll() on c.RegionId equals r.Id
                              select new
                              {
                                  ID = e.Id,
