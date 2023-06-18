@@ -11,8 +11,7 @@ namespace MVCArchitecture.Views
     {
         public static void List()
         {
-            bool exitProgram = false;
-            while (!exitProgram)
+            while (true)
             {
                 Console.WriteLine("Pilih Menu");
                 Console.WriteLine("1. Region");
@@ -27,8 +26,7 @@ namespace MVCArchitecture.Views
                 Console.Write("Pilih menu: ");
 
                 MenuController.SelectMenu();
-            }
-            
+            }          
         }
     }
 }
