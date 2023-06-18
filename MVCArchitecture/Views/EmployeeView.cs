@@ -14,7 +14,7 @@ namespace MVCArchitecture.Views
         {
             //get all employees
             Console.WriteLine("Get All Employees");
-            List<Employees> employees = EmployeeController.GetAll();
+            List<Employees> employees = Employees.GetAll();
             foreach (Employees employee in employees)
             {
                 Console.WriteLine("=======================================");

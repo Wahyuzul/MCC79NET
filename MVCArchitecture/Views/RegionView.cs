@@ -22,6 +22,15 @@ namespace MVCArchitecture.Views
             Console.Write("Masukan pilihan: ");
             RegionController.Edit();
         }
+
+        public static void GetAll()
+        {
+            List<Region> regions = Region.GetAll();
+            foreach (Region region in regions)
+            {
+                Console.WriteLine("ID: " + region.Id + ", Name: " + region.Name);
+            }
+        }
         public static void GetById()
         {
             Console.Write("Masukan ID region: ");

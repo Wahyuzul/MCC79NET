@@ -12,32 +12,32 @@ namespace MVCArchitecture.Views
     {
         public static void Menu()
         {
-            CountryView.GetAll();
+    
+            Console.WriteLine();
+            Console.WriteLine("Edit Country:");
             Console.WriteLine("1. Get Country By ID");
             Console.WriteLine("2. Insert New Country");
             Console.WriteLine("3. Update Country");
             Console.WriteLine("4. Delete Country");
             Console.WriteLine("5. Exit");
             Console.Write("Masukan pilihan: ");
-            CountryController.EditCountry();
+            CountryController.Edit();
         }
+
         public static void GetAll()
         {
-            Console.WriteLine("Get All Countries");
-            Console.WriteLine("--------------------------");
-            List<Countries> countries = CountryController.GetAll();
+            List<Countries> countries = Countries.GetAll();
             foreach (Countries country in countries)
             {
                 Console.WriteLine("ID: " + country.Id + ", Name: " + country.Name + ", Region ID: " + country.RegionId);
             }
-            Console.WriteLine();
         }
         public static void GetById()
         {
             Console.Write("Masukan ID country: ");
             string GETidregion = Console.ReadLine();
 
-            CountryController.GetById(GETidregion);
+            Countries.GetById(GETidregion);
         }
         public static void Insert()
         {
@@ -48,7 +48,7 @@ namespace MVCArchitecture.Views
             Console.Write("Masukan ID region: ");
             int INidregion = Convert.ToInt32(Console.ReadLine());
 
-            CountryController.Insert(INidcountry, INnamacountry, INidregion);
+            Countries.Insert(INidcountry, INnamacountry, INidregion);
         }
         public static void Update()
         {
@@ -59,7 +59,7 @@ namespace MVCArchitecture.Views
             Console.Write("Masukan ID region baru: ");
             int UPregionid = Convert.ToInt32(Console.ReadLine());
 
-            CountryController.Update(UPidcountry, UPnamacountry, UPregionid);
+            Countries.Update(UPidcountry, UPnamacountry, UPregionid);
         }
 
         public static void Delete()
@@ -67,7 +67,7 @@ namespace MVCArchitecture.Views
             Console.Write("Masukan ID country: ");
             string DELidregion = Console.ReadLine();
 
-            CountryController.Delete(DELidregion);
+            Countries.Delete(DELidregion);
         }
     }
 }

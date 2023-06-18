@@ -25,36 +25,36 @@ namespace MVCArchitecture.Controllers
                         break;
                     case 2:
                         Console.Clear();
-                        CountryView.Menu();
+                        CountryController.Menu();
                         break;
                     case 3:
                         Console.Clear();
-                        LocationView.GetAll();
+                        LocationController.Menu();
                         Console.ReadKey();
                         Console.Clear();
                         break;
                     case 4:
                         Console.Clear();
-                        DepartmentView.GetAll();
+                        DepartmentController.Menu();
                         Console.ReadKey();
                         Console.Clear();
                         break;
                     case 5:
                         Console.Clear();
-                        EmployeeView.GetAll();
+                        EmployeeController.Menu();
                         Console.ReadKey();
                         Console.Clear();
                         break;
                     case 6:
                         Console.Clear();
-                        JobView.GetAll();
+                        JobController.Menu();
                         Console.ReadKey();
                         Console.Clear();
                         break;
                     case 7:
                         Console.Clear();
                         Console.Clear();
-                        HistoryView.GetAll();
+                        HistoryController.Menu();
                         Console.ReadKey();
                         Console.Clear();
                         break;

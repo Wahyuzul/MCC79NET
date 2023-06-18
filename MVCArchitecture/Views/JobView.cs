@@ -15,7 +15,7 @@ namespace MVCArchitecture.Views
             //get all locations
             Console.WriteLine("Get All Jobs");
             Console.WriteLine("--------------------------");
-            List<Jobs> jobs = JobController.GetAll();
+            List<Jobs> jobs = Jobs.GetAll();
             foreach (Jobs job in jobs)
             {
                 Console.WriteLine("ID: " + job.Id + ", Title: " + job.title + ", min salary: " + job.minSalary + ", max salary: " + job.maxSalary);

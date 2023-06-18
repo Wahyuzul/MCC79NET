@@ -15,11 +15,7 @@ namespace MVCArchitecture.Controllers
 
         public static void Menu()
         {
-            List<Region> regions = Region.GetAll();
-            foreach (Region region in regions)
-            {
-                Console.WriteLine("ID: " + region.Id + ", Name: " + region.Name);
-            }
+            RegionView.GetAll();
             RegionView.editMenu();
         }
         

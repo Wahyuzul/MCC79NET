@@ -15,7 +15,7 @@ namespace MVCArchitecture.Views
             //get all departments
             Console.WriteLine("Get All Departments");
             Console.WriteLine("--------------------------");
-            List<Departments> departments = DepartmentController.GetAll();
+            List<Departments> departments = Departments.GetAll();
             foreach (Departments department in departments)
             {
                 Console.WriteLine("ID: " + department.Id + ", Name: " + department.Name + ", Location ID: " + department.LocationID + ", Manager ID: " + department.ManagerID);

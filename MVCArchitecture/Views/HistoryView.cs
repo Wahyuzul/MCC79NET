@@ -14,7 +14,7 @@ namespace MVCArchitecture.Views
         {
             //get all locations
             Console.WriteLine("Get All Histories");
-            List<Histories> histories = HistoryController.GetAll();
+            List<Histories> histories = Histories.GetAll();
             foreach (Histories history in histories)
             {
                 Console.WriteLine("=======================================");
