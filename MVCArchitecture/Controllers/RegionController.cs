@@ -15,8 +15,7 @@ namespace MVCArchitecture.Controllers
 
         public static void Menu()
         {
-            RegionView.GetAll();
-            RegionView.editMenu();
+            RegionView.Menu();
         }
         
         public static void Edit()

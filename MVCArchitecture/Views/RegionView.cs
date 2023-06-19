@@ -10,8 +10,9 @@ namespace MVCArchitecture.Views
 {
     public class RegionView
     {
-        public static void editMenu() 
+        public static void Menu() 
         {
+            GetAll();
             Console.WriteLine();
             Console.WriteLine("Edit Region:");
             Console.WriteLine("1. Get Region By ID");
