@@ -14,7 +14,7 @@ namespace MVCArchitecture.Views
         {
             Region region = new Region();
 
-            GetAll(region.GetAll());
+            List(region.GetAll());
 
             Console.WriteLine();
             Console.WriteLine("Edit Region:");
@@ -27,7 +27,7 @@ namespace MVCArchitecture.Views
             RegionController.Edit();
         }
 
-        public static void GetAll(List<Region> regions)
+        public static void List(List<Region> regions)
         {
             foreach (Region region in regions)
             {

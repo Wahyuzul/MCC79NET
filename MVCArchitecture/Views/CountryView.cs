@@ -14,7 +14,7 @@ namespace MVCArchitecture.Views
         {
             Countries country = new Countries();
 
-            GetAll(country.GetAll());
+            List(country.GetAll());
             Console.WriteLine();
             Console.WriteLine("Edit Country:");
             Console.WriteLine("1. Get Country By ID");
@@ -26,7 +26,7 @@ namespace MVCArchitecture.Views
             CountryController.Edit();
         }
 
-        public static void GetAll(List<Countries> countries)
+        public static void List(List<Countries> countries)
         {
             foreach (Countries country in countries)
             {

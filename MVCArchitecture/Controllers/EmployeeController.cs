@@ -14,7 +14,7 @@ namespace MVCArchitecture.Controllers
         public static void Menu()
         {
             Employees emp = new Employees();
-            EmployeeView.GetAll(emp.GetAll());
+            EmployeeView.List(emp.GetAll());
         }
     }
 }

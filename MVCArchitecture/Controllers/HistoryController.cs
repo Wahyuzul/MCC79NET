@@ -14,7 +14,7 @@ namespace MVCArchitecture.Controllers
       public static void Menu()
         {
             Histories history = new Histories();
-            HistoryView.GetAll(history.GetAll());
+            HistoryView.List(history.GetAll());
         }
     }
 }

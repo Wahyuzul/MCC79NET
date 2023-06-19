@@ -14,7 +14,7 @@ namespace MVCArchitecture.Controllers
         public static void Menu()
         {
             Jobs job = new Jobs();
-            JobView.GetAll(job.GetAll());
+            JobView.List(job.GetAll());
         }
     }
 }

@@ -10,7 +10,7 @@ namespace MVCArchitecture.Views
 {
     internal class EmployeeView
     {
-        public static void GetAll(List<Employees> employees)
+        public static void List(List<Employees> employees)
         {
             //get all employees
             Console.WriteLine("Get All Employees");

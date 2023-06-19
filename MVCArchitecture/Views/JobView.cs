@@ -10,7 +10,7 @@ namespace MVCArchitecture.Views
 {
     internal class JobView
     {
-        public static void GetAll(List<Jobs> jobs)
+        public static void List(List<Jobs> jobs)
         {
             //get all locations
             Console.WriteLine("Get All Jobs");

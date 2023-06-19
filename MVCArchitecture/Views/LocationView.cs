@@ -10,7 +10,7 @@ namespace MVCArchitecture.Views
 {
     public class LocationView
     {
-        public static void GetAll(List<Locations> locations)
+        public static void List(List<Locations> locations)
         {
             //get all locations
             Console.WriteLine("Get All Locations");

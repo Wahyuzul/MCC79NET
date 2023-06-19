@@ -14,7 +14,7 @@ namespace MVCArchitecture.Controllers
         public static void Menu()
         {
             Locations location = new Locations();
-            LocationView.GetAll(location.GetAll());
+            LocationView.List(location.GetAll());
         }
     }
 }

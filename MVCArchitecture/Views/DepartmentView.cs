@@ -10,7 +10,7 @@ namespace MVCArchitecture.Views
 {
     internal class DepartmentView
     {
-        public static void GetAll(List<Departments> departments)
+        public static void List(List<Departments> departments)
         {
             //get all departments
             Console.WriteLine("Get All Departments");

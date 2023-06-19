@@ -14,7 +14,7 @@ namespace MVCArchitecture.Controllers
         public static void Menu()
         {
             Departments dept = new Departments();
-            DepartmentView.GetAll(dept.GetAll());
+            DepartmentView.List(dept.GetAll());
         }
     }
 }
