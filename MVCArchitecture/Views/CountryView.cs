@@ -12,7 +12,7 @@ namespace MVCArchitecture.Views
     {
         public static void Menu()
         {
-    
+            GetAll();
             Console.WriteLine();
             Console.WriteLine("Edit Country:");
             Console.WriteLine("1. Get Country By ID");

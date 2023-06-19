@@ -14,9 +14,7 @@ namespace MVCArchitecture.Controllers
     {
         public static void Menu()
         {
-            CountryView.GetAll();
             CountryView.Menu();
-
         }
         public static void Edit()
         {
