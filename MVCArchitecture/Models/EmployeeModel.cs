@@ -20,7 +20,8 @@ namespace MVCArchitecture.Models
         public int ManagerID { get; set; }
         public string JobID { get; set; }
         public int DptID { get; set; }
-        public static List<Employees> GetAll()
+
+        public List<Employees> GetAll()
         {
             var employee = new List<Employees>();
             try

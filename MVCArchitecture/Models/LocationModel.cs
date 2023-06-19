@@ -15,7 +15,8 @@ namespace MVCArchitecture.Models
         public string City { get; set; }
         public string State { get; set; }
         public string CtrID { get; set; }
-        public static List<Locations> GetAll()
+
+        public List<Locations> GetAll()
         {
             var location = new List<Locations>();
             try

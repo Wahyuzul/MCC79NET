@@ -13,7 +13,8 @@ namespace MVCArchitecture.Controllers
     {
       public static void Menu()
         {
-            HistoryView.GetAll();
+            Histories history = new Histories();
+            HistoryView.GetAll(history.GetAll());
         }
     }
 }

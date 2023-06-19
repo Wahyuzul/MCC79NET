@@ -12,11 +12,17 @@ namespace MVCArchitecture.Controllers
     {
         public static void Menu1()
         {
-            var employees = (from e in Employees.GetAll()
-                             join d in Departments.GetAll() on e.DptID equals d.Id
-                             join l in Locations.GetAll() on d.LocationID equals l.Id
-                             join c in Countries.GetAll() on l.CtrID equals c.Id
-                             join r in Region.GetAll() on c.RegionId equals r.Id
+            Region region = new Region();
+            Countries country = new Countries();
+            Locations location = new Locations();
+            Employees employee = new Employees();
+            Departments department = new Departments();
+
+            var employees = (from e in employee.GetAll()
+                             join d in department.GetAll() on e.DptID equals d.Id
+                             join l in location.GetAll() on d.LocationID equals l.Id
+                             join c in country.GetAll() on l.CtrID equals c.Id
+                             join r in region.GetAll() on c.RegionId equals r.Id
                              select new
                              {
                                  ID = e.Id,
@@ -49,8 +55,11 @@ namespace MVCArchitecture.Controllers
 
         public static void Menu2()
         {
-            var empDepartment = (from d in Departments.GetAll()
-                                 join e in Employees.GetAll() on d.Id equals e.DptID into empDpt
+            Employees employee = new Employees();
+            Departments department = new Departments();
+
+            var empDepartment = (from d in department.GetAll()
+                                 join e in employee.GetAll() on d.Id equals e.DptID into empDpt
                                  where empDpt.Count() > 3
                                  select new
                                  {

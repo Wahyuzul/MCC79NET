@@ -13,7 +13,8 @@ namespace MVCArchitecture.Controllers
     {
         public static void Menu()
         {
-            LocationView.GetAll();
+            Locations location = new Locations();
+            LocationView.GetAll(location.GetAll());
         }
     }
 }

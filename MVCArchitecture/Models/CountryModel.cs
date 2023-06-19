@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace MVCArchitecture.Models
 {
-    internal class Countries
+    public class Countries
     {
         public string Id { get; set; }
         public string Name { get; set; }
         public int RegionId { get; set; }
 
-        public static List<Countries> GetAll()
+        public List<Countries> GetAll()
         {
             var country = new List<Countries>();
             try
@@ -57,7 +57,7 @@ namespace MVCArchitecture.Models
             return country;
         }
 
-        public static void GetById(string id)
+        public void GetById(string id)
         {
             var country = new Countries();
             try
@@ -100,7 +100,7 @@ namespace MVCArchitecture.Models
             Console.WriteLine("ID: " + country.Id + ", Name: " + country.Name + ", Region ID: " + country.RegionId);
         }
 
-        public static int Insert(string id, string nama, int regionid)
+        public int Insert(string id, string nama, int regionid)
         {
             int result = 0;
             Program.connection = new SqlConnection(Program.connectionString);
@@ -158,7 +158,7 @@ namespace MVCArchitecture.Models
             return result;
         }
 
-        public static int Update(string id, string name, int regionid)
+        public int Update(string id, string name, int regionid)
         {
             int result = 0;
             Program.connection.Open();
@@ -214,7 +214,7 @@ namespace MVCArchitecture.Models
             return result;
         }
 
-        public static int Delete(string id)
+        public int Delete(string id)
         {
             int result = 0;
             Program.connection.Open();

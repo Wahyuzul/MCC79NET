@@ -13,7 +13,7 @@ namespace MVCArchitecture.Models
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public static List<Region> GetAll()
+        public List<Region> GetAll()
         {
             var region = new List<Region>();
             try
@@ -54,7 +54,7 @@ namespace MVCArchitecture.Models
             return region;
         }
 
-        public static void GetById(int id)
+        public void GetById(int id)
         {
             var region = new Region();
             try
@@ -96,7 +96,7 @@ namespace MVCArchitecture.Models
             Console.WriteLine("Id : " + region.Id + ", Name : " + region.Name);
         }
 
-        public static int Insert(string nama)
+        public int Insert(string nama)
         {
             int result = 0;
 
@@ -140,7 +140,7 @@ namespace MVCArchitecture.Models
             return result;
         }
 
-        public static int Update(int id, string name)
+        public int Update(int id, string name)
         {
             int result = 0;
 
@@ -192,7 +192,7 @@ namespace MVCArchitecture.Models
             return result;
         }
 
-        public static int Delete(int id)
+        public int Delete(int id)
         {
             int result = 0;
 

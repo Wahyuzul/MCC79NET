@@ -10,12 +10,11 @@ namespace MVCArchitecture.Views
 {
     internal class DepartmentView
     {
-        public static void GetAll()
+        public static void GetAll(List<Departments> departments)
         {
             //get all departments
             Console.WriteLine("Get All Departments");
             Console.WriteLine("--------------------------");
-            List<Departments> departments = Departments.GetAll();
             foreach (Departments department in departments)
             {
                 Console.WriteLine("ID: " + department.Id + ", Name: " + department.Name + ", Location ID: " + department.LocationID + ", Manager ID: " + department.ManagerID);

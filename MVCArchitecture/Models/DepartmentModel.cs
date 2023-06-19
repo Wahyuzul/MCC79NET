@@ -13,7 +13,8 @@ namespace MVCArchitecture.Models
         public string Name { get; set; }
         public int LocationID { get; set; }
         public int ManagerID { get; set; }
-        public static List<Departments> GetAll()
+
+        public List<Departments> GetAll()
         {
             var department = new List<Departments>();
             try

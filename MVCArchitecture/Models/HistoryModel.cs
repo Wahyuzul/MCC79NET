@@ -14,7 +14,8 @@ namespace MVCArchitecture.Models
         public DateTime? endDate { get; set; }
         public int dptID { get; set; }
         public string jobID { get; set; }
-        public static List<Histories> GetAll()
+
+        public List<Histories> GetAll()
         {
             var history = new List<Histories>();
             try

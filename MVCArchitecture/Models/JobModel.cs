@@ -13,7 +13,8 @@ namespace MVCArchitecture.Models
         public string title { get; set; }
         public int minSalary { get; set; }
         public int maxSalary { get; set; }
-        public static List<Jobs> GetAll()
+
+        public List<Jobs> GetAll()
         {
             var job = new List<Jobs>();
             try

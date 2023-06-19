@@ -10,11 +10,10 @@ namespace MVCArchitecture.Views
 {
     internal class HistoryView
     {
-        public static void GetAll()
+        public static void GetAll(List<Histories> histories)
         {
             //get all locations
             Console.WriteLine("Get All Histories");
-            List<Histories> histories = Histories.GetAll();
             foreach (Histories history in histories)
             {
                 Console.WriteLine("=======================================");

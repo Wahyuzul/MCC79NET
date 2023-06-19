@@ -10,12 +10,11 @@ namespace MVCArchitecture.Views
 {
     internal class JobView
     {
-        public static void GetAll()
+        public static void GetAll(List<Jobs> jobs)
         {
             //get all locations
             Console.WriteLine("Get All Jobs");
             Console.WriteLine("--------------------------");
-            List<Jobs> jobs = Jobs.GetAll();
             foreach (Jobs job in jobs)
             {
                 Console.WriteLine("ID: " + job.Id + ", Title: " + job.title + ", min salary: " + job.minSalary + ", max salary: " + job.maxSalary);

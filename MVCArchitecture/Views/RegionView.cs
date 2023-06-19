@@ -12,7 +12,10 @@ namespace MVCArchitecture.Views
     {
         public static void Menu() 
         {
-            GetAll();
+            Region region = new Region();
+
+            GetAll(region.GetAll());
+
             Console.WriteLine();
             Console.WriteLine("Edit Region:");
             Console.WriteLine("1. Get Region By ID");
@@ -24,9 +27,8 @@ namespace MVCArchitecture.Views
             RegionController.Edit();
         }
 
-        public static void GetAll()
+        public static void GetAll(List<Region> regions)
         {
-            List<Region> regions = Region.GetAll();
             foreach (Region region in regions)
             {
                 Console.WriteLine("ID: " + region.Id + ", Name: " + region.Name);
@@ -34,34 +36,42 @@ namespace MVCArchitecture.Views
         }
         public static void GetById()
         {
+            Region region = new Region();
+
             Console.Write("Masukan ID region: ");
             int GETidregion = int.Parse(Console.ReadLine());
 
-            Region.GetById(GETidregion);
+            region.GetById(GETidregion);
         }
         public static void Insert()
         {
+            Region region = new Region();
+
             Console.Write("Masukan nama region: ");
             string INnamaregion = Console.ReadLine();
 
-            Region.Insert(INnamaregion);
+            region.Insert(INnamaregion);
         }
         public static void Update()
         {
+            Region region = new Region();
+
             Console.Write("Masukan ID region yang ingin diupdate: ");
             int UPidregion = int.Parse(Console.ReadLine());
             Console.Write("Masukan nama region baru: ");
             string UPnamaregion = Console.ReadLine();
 
-            Region.Update(UPidregion, UPnamaregion);
+            region.Update(UPidregion, UPnamaregion);
         }
 
         public static void Delete()
         {
+            Region region = new Region();
+
             Console.Write("Masukan ID region: ");
             int DELidregion = int.Parse(Console.ReadLine());
 
-            Region.Delete(DELidregion);
+            region.Delete(DELidregion);
         }
 
     }
